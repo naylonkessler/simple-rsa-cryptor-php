@@ -18,19 +18,28 @@ Just import, instantiate and call:
 <?php
 
 use SimpleRSACryptor\Cryptor;
+use SimpleRSACryptor\Keys\PublicKey;
+use SimpleRSACryptor\Keys\PrivateKey;
 
-$publicKey = '...';
-$privateKey = '...';
-$passphrase = '...';
+$publicKey = new PublicKey('path-to-public-key-file.pem');
+$privateKey = new PrivateKey('path-to-private-key-file.pem');
+$passPhrase = 'pass phrase of private key';
 
-$cryptor = new Cryptor($publicKey, $privateKey, $passphrase);
+$cryptor = new Cryptor($publicKey, $privateKey, $passPhrase);
 $encrypted = $cryptor->encrypt('Some data');
 $decrypted = $cryptor->decrypt($encrypted);
 
 echo $decrypted;
 ```
 
-### The \SimpleRSACryptor\Cryptor object
+### The \SimpleRSACryptor\Cryptor class
 
-TDB
+TBD
 
+### The \SimpleRSACryptor\Keys\PublicKey class 
+
+TBD
+
+### The \SimpleRSACryptor\Keys\PrivateKey class
+
+TBD
